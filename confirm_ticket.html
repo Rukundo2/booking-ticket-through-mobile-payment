@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Confirm Ticket - Admin | Virunga Express</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f4f6f9;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 80px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #27ae60;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #27ae60;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #219150;
+    }
+
+    .ticket-details {
+      margin-top: 30px;
+      background-color: #ecf0f1;
+      padding: 15px;
+      border-radius: 5px;
+    }
+
+    .ticket-details p {
+      margin: 8px 0;
+    }
+
+    a.back {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #27ae60;
+    }
+
+    a.back:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Confirm Ticket</h2>
+    <form>
+      <label for="ticket_id">Enter Ticket ID or Code:</label>
+      <input type="text" id="ticket_id" name="ticket_id" placeholder="e.g. TKT12345" required>
+
+      <button type="button" onclick="showTicketDetails()">Search Ticket</button>
+    </form>
+
+    <!-- Ticket Details Section -->
+    <div id="ticketInfo" class="ticket-details" style="display:none;">
+      <h3>Ticket Details:</h3>
+      <p><strong>Passenger:</strong> Jean Nkundwa</p>
+      <p><strong>Route:</strong> Kigali to Musanze</p>
+      <p><strong>Date:</strong> 2025-04-10</p>
+      <p><strong>Seats:</strong> 2</p>
+      <p><strong>Status:</strong> Pending</p>
+
+      <button onclick="confirmTicket()">Confirm Ticket</button>
+    </div>
+
+    <a href="admin_dashboard.html" class="back">← Back to Dashboard</a>
+  </div>
+
+  <script>
+    function showTicketDetails() {
+      // This is a placeholder for dynamic loading
+      document.getElementById('ticketInfo').style.display = 'block';
+    }
+
+    function confirmTicket() {
+      alert("✅ Ticket confirmed successfully!");
+      // You would connect to PHP or database here in real use
+    }
+  </script>
+
+</body>
+</html>

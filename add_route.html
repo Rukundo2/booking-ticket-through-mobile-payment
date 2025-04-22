@@ -1,0 +1,93 @@
+<!-- add_route.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add New Route - Virunga Express</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f9;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 80px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #27ae60;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #1e8449;
+    }
+
+    a.back {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #27ae60;
+    }
+
+    a.back:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Add New Route</h2>
+    <form action="save_route.php" method="POST">
+      <label for="from">From:</label>
+      <input type="text" id="from" name="from" placeholder="e.g. Kigali" required>
+
+      <label for="to">To:</label>
+      <input type="text" id="to" name="to" placeholder="e.g. Musanze" required>
+
+      <label for="price">Ticket Price (RWF):</label>
+      <input type="number" id="price" name="price" min="1000" step="100" required>
+
+      <label for="departure_time">Departure Time:</label>
+      <input type="time" id="departure_time" name="departure_time" required>
+
+      <button type="submit">Add Route</button>
+    </form>
+    <a href="admin_dashboard.html" class="back">← Back to Dashboard</a>
+  </div>
+
+</body>
+</html>
